@@ -18,7 +18,7 @@ public class FunFactsActivity extends ActionBarActivity {
 
         //Declare our View variables and assign the Views from the layout file
         final TextView factLabel = (TextView) findViewById(R.id.factTextView);
-        Button showFactButton = (Button) findViewById(R.id.showFactButton);
+        Button showFactButton = (Button) findViewById(R.id.showFactBtn);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
