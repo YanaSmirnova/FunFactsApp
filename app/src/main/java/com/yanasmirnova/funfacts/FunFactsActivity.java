@@ -19,7 +19,7 @@ public class FunFactsActivity extends ActionBarActivity {
 
         // Declare our View variables and assign the Views from the layout file
         final TextView factLabel = (TextView) findViewById(R.id.factTextView);
-        Button showFactButton = (Button) findViewById(R.id.showFactBtn);
+        final Button showFactButton = (Button) findViewById(R.id.showFactBtn);
         final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -31,6 +31,7 @@ public class FunFactsActivity extends ActionBarActivity {
 
                 int color = mColorWheel.getColor();
                 relativeLayout.setBackgroundColor(color);
+                showFactButton.setTextColor(color);
             }
         };
 
