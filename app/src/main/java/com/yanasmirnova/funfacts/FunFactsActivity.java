@@ -31,7 +31,8 @@ public class FunFactsActivity extends ActionBarActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fact = mFactBook.getFact();
+                String fact = "";
+                fact = mFactBook.getFact();
                 // Update the fact label with a new fact
                 factLabel.setText(fact);
 
