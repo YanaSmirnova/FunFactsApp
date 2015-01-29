@@ -30,7 +30,6 @@ public class ColorWheel {
         // Randomly select a color
         Random randomGenerator = new Random(); //Construct a new Random number generator
         int randomNumber = randomGenerator.nextInt(mColors.length);
-
         String color = mColors[randomNumber];
 
         return Color.parseColor(color);
