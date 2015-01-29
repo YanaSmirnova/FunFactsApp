@@ -1,2 +1,2 @@
 # FunFactsApp
-Building a Simple Android App with TeamTreeHouse
+Building a Simple Android App with TeamTreeHouse.com
