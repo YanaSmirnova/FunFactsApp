@@ -1,5 +1,7 @@
 package com.yanasmirnova.funfacts;
 
+import android.graphics.Color;
+
 import java.util.Random;
 
 /**
@@ -24,10 +26,15 @@ public class ColorWheel {
     };
 
     // Methods
-    public String getColor() {
+    public int getColor() {
         // Randomly select a color
         Random randomGenerator = new Random(); //Construct a new Random number generator
         int randomNumber = randomGenerator.nextInt(mColors.length);
-        return mColors[randomNumber];
+
+        String color = "";
+        color = mColors[randomNumber];
+        int colorAsInt = Color.parseColor(color);
+
+        return colorAsInt;
     }
 }
