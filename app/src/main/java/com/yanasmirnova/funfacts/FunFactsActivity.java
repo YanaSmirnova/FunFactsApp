@@ -1,17 +1,11 @@
 package com.yanasmirnova.funfacts;
 
-import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import java.util.Random;
-
 
 public class FunFactsActivity extends ActionBarActivity {
     // Member variables
@@ -31,8 +25,7 @@ public class FunFactsActivity extends ActionBarActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fact = "";
-                fact = mFactBook.getFact();
+                String fact = mFactBook.getFact();
                 // Update the fact label with a new fact
                 factLabel.setText(fact);
 
