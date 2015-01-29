@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
+
 
 public class FunFactsActivity extends ActionBarActivity {
 
@@ -16,16 +18,39 @@ public class FunFactsActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fun_facts);
 
-        //Declare our View variables and assign the Views from the layout file
+        // Declare our View variables and assign the Views from the layout file
         final TextView factLabel = (TextView) findViewById(R.id.factTextView);
         Button showFactButton = (Button) findViewById(R.id.showFactBtn);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //The button was clicked, so update the fact label with a new fact
-                String fact = "Ostriches can run faster than horses.";
-                factLabel.setText(fact);
+        // The button was clicked, so update the fact label with a new fact
+            String fact = "";
+            // Randomly select a fact
+            Random randomGenerator = new Random(); //Construct a new Random number generator
+            int randomNumber = randomGenerator.nextInt(3);
+
+            /* Convert the random number to a text fact
+                0 = Ants stretch when they wake up in the morning.
+                1 = Ostriches can run faster than horses.
+                2 = Olympic gold medals are made mostly of silver.
+             */
+            if (randomNumber == 0) {
+                fact = "Ants stretch when they wake up in the morning.";
+            }
+            else if (randomNumber == 1) {
+                fact = "Ostriches can run faster than horses.";
+            }
+            else if (randomNumber == 2) {
+                fact = "Olympic gold medals are made mostly of silver.";
+            }
+            else {
+                fact = "Sorry, there was an error.";
+            }
+
+            // Update the label with our dynamic fact
+            factLabel.setText(fact);
             }
         };
 
