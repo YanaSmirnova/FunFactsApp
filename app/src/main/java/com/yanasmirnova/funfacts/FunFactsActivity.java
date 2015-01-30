@@ -2,13 +2,16 @@ package com.yanasmirnova.funfacts;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class FunFactsActivity extends ActionBarActivity {
-    // Member variables
+
+    public static final String TAG = FunFactsActivity.class.getSimpleName();
+
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
 
@@ -36,5 +39,8 @@ public class FunFactsActivity extends ActionBarActivity {
         };
 
         showFactButton.setOnClickListener(listener);
+
+        Log.d(TAG, "We're logging from the OnCreate() method");
+        //Toast.makeText(this, "Hello world!", Toast.LENGTH_LONG).show();
     }
 }
